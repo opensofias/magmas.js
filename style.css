@@ -1,0 +1,12 @@
+body
+{
+	font-size: 16pt;
+}
+
+.operator th, .operator tr, .elements li
+{
+	height:1em;
+	min-width:1em;
+	text-align: center;
+	font-size: 16pt;
+}
