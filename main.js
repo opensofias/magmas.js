@@ -16,15 +16,17 @@ class Magma
 	{
 		this.operations.push
 		(
-			new Operation(this,defaultOperatoSymbols[this.operations.length])
+			new Operation(this,defaultOperatoSymbols[this.operations.length + 1])
 		)
 	}
 
 	addElement ()
 	{
-		this.elements.push(defaultElementSymbols.)
+		this.elements.push(defaultElementSymbols[this.elements.length + 1])
 	}
 }
+
+
 
 class Operation
 {
@@ -32,6 +34,7 @@ class Operation
 	{
 		this.magma = magma
 		this.symbol = symbol
+		this.table = [[]]
 	}
 	magma
 	symbol
