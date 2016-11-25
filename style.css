@@ -1,6 +1,19 @@
 body
 {
 	font-size: 16pt;
+	font-family: "Source Serif Pro", "Computer Modern", Times, "Times New Roman", serif;
+	padding: 1em;
+}
+
+h1
+{
+	text-align: right;
+	position: fixed;
+	right: 1em;
+	bottom: 1em;
+	margin: 0;
+	font-weight: 300;
+	opacity: .5;
 }
 
 .magma
@@ -19,18 +32,28 @@ body
 	font-size: 16pt;
 }
 
+.operator
+{
+	margin-right: 1em;
+}
+
 .elements
 {
 	width: 100%;
 	list-style-type: none;
 	padding: 0;
-	margin: 0 0 .5em 0;
+	margin: 0 0 1em 0;
 	display: flex;
+}
+
+.elements .new
+{
+	background-color: #e0fff0;
 }
 
 .operator th, .operator tr, .elements li
 {
-	padding: 0;
+	padding: .125em;
 	text-align: center;
 	height:1em;
 	min-width:1em;

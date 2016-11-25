@@ -26,17 +26,28 @@ class Magma
 	}
 }
 
-
-
 class Operation
 {
 	constructor (magma, symbol)
 	{
+		this.el = Document.addElement()
 		this.magma = magma
 		this.symbol = symbol
 		this.table = [[]]
 	}
-	magma
-	symbol
-	table
 }
+
+class Combination
+{
+	constructor (magma)
+	{
+
+	}
+
+	function ()
+	{
+
+	}
+}
+
+
