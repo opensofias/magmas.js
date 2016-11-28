@@ -6,20 +6,29 @@ class Magma
 	constructor ()
 	{
 		this.elements = []
-		this.operations = []
+		this.operations = {}
+		operations.count = 0
 	}
 	
-	addOperation ()
+	addOperation (symbol = defaultOperatoSymbols[this.operations.count + 1])
 	{
-		this.operations.push
-		(
-			new Operation(this,defaultOperatoSymbols[this.operations.length + 1])
-		)
+		this.operations[symbol] = new Operation(this,symbol)
+		this.operations.count++
 	}
 
 	addElement ()
 	{
 		this.elements.push(defaultElementSymbols[this.elements.length + 1])
+	}
+
+	addQuery ()
+	{
+
+	}
+
+	lookup (operand1, operand2, operator)
+	{
+		return operations[operator].table[operand1][operand2]
 	}
 }
 
@@ -31,26 +40,29 @@ class Operation
 		this.el = Document.addElement()
 		this.magma = magma
 		this.symbol = symbol
-		this.table = [[]]
-	}
-
-	lookup (operand1, operand2)
-	{
-
+		this.table = []
 	}
 }
 
 class Query
 {
-	constructor (magma)
+	constructor (magma, string = "")
 	{
 		this.magma = magma
-		this.string = ""
+		this.string = string
+		this.stack = []
 	}
 
-	do()
+	evaluate ()
 	{
-		for 
+		var tmpString = this.string
+		while (tmpString.length)
+		{
+			var symbol = tmpString[0]
+			tmpString = tmpString.substring(1)
+			if(magma.elements[symbol])
+			
+		}
 	}
 }
 
