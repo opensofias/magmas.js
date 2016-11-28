@@ -8,9 +8,6 @@ class Magma
 		this.elements = []
 		this.operations = []
 	}
-
-	elements
-	operations
 	
 	addOperation ()
 	{
@@ -28,6 +25,7 @@ class Magma
 
 class Operation
 {
+
 	constructor (magma, symbol)
 	{
 		this.el = Document.addElement()
@@ -35,19 +33,26 @@ class Operation
 		this.symbol = symbol
 		this.table = [[]]
 	}
+
+	lookup (operand1, operand2)
+	{
+
+	}
 }
 
-class Combination
+class Query
 {
 	constructor (magma)
 	{
-
+		this.magma = magma
+		this.string = ""
 	}
 
-	function ()
+	do()
 	{
-
+		for 
 	}
 }
+
 
 
