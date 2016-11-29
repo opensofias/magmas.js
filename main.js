@@ -30,6 +30,17 @@ class Magma
 	{
 		return operations[operator].table[operand1][operand2]
 	}
+
+	getFunction(symbol)
+	{
+		if (this.operations[symbol])
+		{
+			return function (stack)
+			{
+				return operations operations[symbol].table[stack.pop][stack.pop]
+			}
+		}
+	}
 }
 
 class Operation
