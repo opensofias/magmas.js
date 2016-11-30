@@ -6,40 +6,36 @@ class Magma
 	constructor ()
 	{
 		this.elements = []
+		this.queries = []
 		this.operations = {}
 		operations.count = 0
 	}
 	
 	addOperation (symbol = defaultOperatoSymbols[this.operations.count + 1])
 	{
-		this.operations[symbol] = new Operation(this,symbol)
+		this.operations [symbol] = new Operation (this,symbol)
 		this.operations.count++
 	}
 
 	addElement ()
 	{
-		this.elements.push(defaultElementSymbols[this.elements.length + 1])
+		this.elements.push (defaultElementSymbols[this.elements.length + 1])
 	}
 
 	addQuery ()
 	{
-
+		this.queries.push (new Query ())
 	}
 
-	lookup (operand1, operand2, operator)
-	{
-		return operations[operator].table[operand1][operand2]
-	}
-
-	getFunction(symbol)
+	step (symbol, stack)
 	{
 		if (this.operations[symbol])
 		{
-			return function (stack)
-			{
-				return operations operations[symbol].table[stack.pop][stack.pop]
-			}
+			stack.push (operations [symbol].table [stack.pop] [stack.pop])
 		}
+		else if (this.elements.indexOf(symbol) >= 0)
+			stack.push (symbol)
+		else alert ("undefined symbol " + symbol)
 	}
 }
 
@@ -66,15 +62,17 @@ class Query
 
 	evaluate ()
 	{
+		this.stack = []
 		var tmpString = this.string
 		while (tmpString.length)
 		{
-			var symbol = tmpString[0]
-			tmpString = tmpString.substring(1)
-			if(magma.elements[symbol])
-			
+			var symbol = tmpString [0]
+			tmpString = tmpString.substring (1)
+			magma.step(stack, symbol)
 		}
 	}
+
+
 }
 
 
