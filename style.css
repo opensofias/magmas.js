@@ -2,17 +2,18 @@ body
 {
 	font-size: 16pt;
 	font-family: "Source Serif Pro", "Computer Modern", Times, "Times New Roman", serif;
-	padding: 1em;
+	margin: 1em 1em 4em 1em;
 }
 
 h1
 {
 	text-align: right;
 	position: fixed;
-	right: 1em;
-	bottom: 1em;
+	right: .5em;
+	bottom: .5em;
 	margin: 0;
 	font-weight: 300;
+	font-size: 2em;
 	opacity: .5;
 }
 

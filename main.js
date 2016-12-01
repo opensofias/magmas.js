@@ -8,18 +8,18 @@ class Magma
 		this.elements = []
 		this.queries = []
 		this.operations = {}
-		operations.count = 0
+		this.operations.count = 0
 	}
 	
-	addOperation (symbol = defaultOperatoSymbols[this.operations.count + 1])
+	addOperation (symbol = defaultOperatorSymbols[this.operations.count])
 	{
 		this.operations [symbol] = new Operation (this,symbol)
 		this.operations.count++
 	}
 
-	addElement ()
+	addElement (symbol = defaultElementSymbols[this.elements.length])
 	{
-		this.elements.push (defaultElementSymbols[this.elements.length + 1])
+		this.elements.push (symbol)
 	}
 
 	addQuery ()
@@ -41,10 +41,8 @@ class Magma
 
 class Operation
 {
-
 	constructor (magma, symbol)
 	{
-		this.el = Document.addElement()
 		this.magma = magma
 		this.symbol = symbol
 		this.table = []
@@ -71,9 +69,10 @@ class Query
 			magma.step(stack, symbol)
 		}
 	}
-
-
 }
 
+class Term
+{
 
+}
 

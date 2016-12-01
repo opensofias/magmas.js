@@ -11,5 +11,5 @@ nothing works here yet. but it might get there eventually.
 
 ## advanced features (maybe)
 
-3. find properties in given operators (?)
+3. find properties in given operators via search (?)
 4. generate operators from properties (??)

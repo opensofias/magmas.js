@@ -1,0 +1,40 @@
+; term properties 
+ab*c=		; !?
+ab*a=		; left absorbtion
+ba*a=		; right absorbtion
+aa*a=		; idempotation
+ab*ba*=		; commutation
+abc**ab*c*=	; association
+aab**aa*b*=	; left alternation
+abb**ab*b*=	; right alternation
+aba**ab*a*=	; flexation
+aaa**aa*a*=	; power association
+
+; operator properties
+
+aa*a= aE	; idempotent element
+aa*a= aA	; idempotent operation
+
+ab*a= aEbE	; an element is left-absorbed by an element (possibly itself)
+ab*a= aAbE	; all elements left-absorb some element
+ab*a= aEbA	; there is an element that left-absorbs all elements
+ab*a= bEaA	; there is an element that is always left-absorbed (left-neutral element)
+ab*a= bAaE	; all elements have an element that left-absorbs them
+ab*a= aAbA	; all element left-absorb any element
+
+; holy fuck, right?
+
+ab*ba*= aEbE	; there are elements that commute with each other
+ab*ba*= aAbE	; there is a commuting element for every element
+ab*ba*= aEbA	; there is an element that commutes with every element
+ab*ba*= aAbA	; all elements commute
+
+ab*c= aAcAbE	; left latin square property
+ab*c= bAcAaE	; right latin square property
+; (does this.. work that way? :| )
+
+ab*c= aAbAcA	; one or less elements (?)
+ab= aAbA		; same (?)
+
+
+; multi-operator properties
