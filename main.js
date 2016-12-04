@@ -18,8 +18,12 @@ class Magma
 	}
 
 	addElement (symbol = defaultElementSymbols[this.elements.length])
-	{
-		this.elements.push (symbol)
+	{ this.elements.push (symbol) }
+
+	removeElement(symbol)
+	{ 
+		var position = this.elements.indexOf(symbol)
+		elements.splice (position, position)
 	}
 
 	addQuery ()

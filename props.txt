@@ -1,3 +1,5 @@
+; examples of properties
+
 ; term properties 
 ab*c=		; !?
 ab*a=		; left absorbtion
@@ -20,8 +22,7 @@ ab*a= aAbE	; all elements left-absorb some element
 ab*a= aEbA	; there is an element that left-absorbs all elements
 ab*a= bEaA	; there is an element that is always left-absorbed (left-neutral element)
 ab*a= bAaE	; all elements have an element that left-absorbs them
-ab*a= aAbA	; all element left-absorb any element
-
+ab*a= aAbA	; all element left-absorb any element (left-null semigroup)
 ; holy fuck, right?
 
 ab*ba*= aEbE	; there are elements that commute with each other
